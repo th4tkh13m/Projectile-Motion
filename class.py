@@ -35,3 +35,17 @@ class Object():
     def __repr__(self) -> str:
         return str((self.getName, self.getM,
                     self.getX, self.getY))
+    
+class Ball(Object):
+    def __init__(self, name, x, y, m, v, theta) -> None:
+        super().__init__(name, x, y, m)
+        self.velocity = v
+        self.angle = theta
+
+    def getVelocity(self) -> float:
+        return self.velocity
+
+    def getAngle(self) -> float:
+        return self.angle
+
+    
