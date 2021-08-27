@@ -6,6 +6,9 @@ class Object():
         assert m >= 0
         self.m = m
 
+    def getName(self) -> str:
+        return self.name
+
     def getX(self) -> float:
         return self.x
     
@@ -25,4 +28,10 @@ class Object():
         self.m = m
 
     def __str__(self) -> str:
-        pass
+        return "Object: " + self.getName + '\n' \
+                + "Mass: " + self.getM + '\n' \
+                + "Coordinates: <" + str(self.getX) + "," \
+                + str(self.getY) + ">"
+    def __repr__(self) -> str:
+        return str((self.getName, self.getM,
+                    self.getX, self.getY))
