@@ -1,6 +1,10 @@
 import numpy as np
 
 class Object():
+    """## Demonstrate the objects on the 2D space
+
+    Include the name, x,y-coordinates and mass of the object.
+    """
     def __init__(self, name: str, x: float,
                  y: float, m: float) -> None:
         assert m >= 0, "Mass must be greater than 0!"
@@ -10,24 +14,85 @@ class Object():
         self.m = m
 
     def getName(self) -> str:
+        """Return the name of the object 
+        ### Parameters: 
+        None
+
+        ### Return: 
+        name: str
+
+        The name of the object.
+        """
         return self.name
 
     def getX(self) -> float:
+        """Return the x-coordinate of the object 
+        ### Parameters: 
+        None
+        ### Return: 
+        x: float
+
+        The current x-coordinate of the object.
+        """
         return self.x
     
     def getY(self) -> float:
+        """Return the y-coordinate of the object 
+        ### Parameters: 
+        None
+        ### Return: 
+        y: float
+
+        The current y-coordinate of the object.
+        """
         return self.y
 
     def getM(self) -> float:
+        """Return the mass of the object 
+        ### Parameters: 
+        None
+        ### Return: 
+        m: float
+
+        The mass of the object.
+        """
         return self.m
 
     def setX(self, x: float) -> None:
+        """Set the x-coordinate of the object 
+        ### Parameters: 
+
+        x: float
+
+        The x-coordinate of the object
+        ### Return: 
+
+        None
+        """
         self.x = x
 
     def setY(self, y: float) -> None:
+        """Set the y-coordinate of the object 
+        ### Parameters: 
+        y: float
+
+        The y-coordinate of the object.
+        ### Return: 
+
+        None
+        """
         self.y = y
 
     def setM(self, m: float) -> None:
+        """Set the x-coordinate of the object 
+        ### Parameters: 
+        m: float
+
+        The mass (weight) of the object. Mass must be greater than or equal to 0.
+        ### Return: 
+
+        None
+        """
         assert m >= 0, "Mass must be greater than 0!"
         self.m = m
 
