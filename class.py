@@ -4,6 +4,23 @@ class Object():
     """## Demonstrate the objects on the 2D space
 
     Include the name, x,y-coordinates and mass of the object.
+    ### Parameters
+
+    name: str. (v >= 0)
+    
+    The name of the Object.
+
+    x: float
+
+    The x-coordinate of the Object. 
+
+    y: float
+
+    The y-coordinate of the Object. 
+
+    m: float (m >= 0)
+
+    The mass of the Object (kg). 
     """
     def __init__(self, name: str, x: float,
                  y: float, m: float) -> None:
@@ -54,7 +71,7 @@ class Object():
         ### Return: 
         m: float
 
-        The mass of the object.
+        The mass of the object (kg).
         """
         return self.m
 
@@ -88,7 +105,7 @@ class Object():
         ### Parameters: 
         m: float
 
-        The mass (weight) of the object. Mass must be greater than or equal to 0.
+        The mass (kg) of the object. Mass must be greater than or equal to 0.
         ### Return: 
 
         None
@@ -111,6 +128,18 @@ class Object():
 # print(Ball)
     
 class Ball(Object):
+    """Demonstrate the object which is threw at time t = 0.
+    Ball is a subclass of Object class, which has 2 more parameters.
+    ### Parameters
+
+    v: float. (v >= 0)
+    
+    The magnitude of the initial velocity of the Object.
+
+    theta: float
+
+    The angle of the object's initial velocity. 
+    """
     def __init__(self, name, x, y, m, v, theta) -> None:
         super().__init__(name, x, y, m)
         self.velocity = v
