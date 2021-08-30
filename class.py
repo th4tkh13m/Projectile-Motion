@@ -101,11 +101,14 @@ class Object():
     def __repr__(self) -> str:
         return str((self.getName(), self.getM(),
                     self.getX(), self.getY()))
+
+
 ## TEST CLASS ##
 # Ball = Object("Ball", 0, 0, -100)
 # print(Ball.getX())
 # print(Ball)
-    
+
+
 class Ball(Object):
     """Demonstrate the object which is threw at time t = 0.
     Ball is a subclass of Object class, which has 2 more parameters.
