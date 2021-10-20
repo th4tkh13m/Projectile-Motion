@@ -11,7 +11,7 @@ class Object():
 
     def getX(self) -> float:
         return self.x
-    
+
     def getY(self) -> float:
         return self.y
 
@@ -24,14 +24,15 @@ class Object():
     def setY(self, y) -> None:
         self.y = y
 
-    def setX(self, m) -> None:
+    def setM(self, m) -> None:
         self.m = m
 
     def __str__(self) -> str:
         return "Object: " + self.getName + '\n' \
-                + "Mass: " + self.getM + '\n' \
-                + "Coordinates: <" + str(self.getX) + "," \
-                + str(self.getY) + ">"
+            + "Mass: " + self.getM + '\n' \
+            + "Coordinates: <" + str(self.getX) + "," \
+            + str(self.getY) + ">"
+
     def __repr__(self) -> str:
         return str((self.getName, self.getM,
                     self.getX, self.getY))
